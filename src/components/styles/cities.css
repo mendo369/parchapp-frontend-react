@@ -1,0 +1,26 @@
+/* Cities.jsx */
+
+.cities {
+  margin: 0 auto;
+  display: grid;
+  grid-auto-flow: column;
+  column-gap: 1em;
+}
+
+/* City.jsx */
+
+.city {
+  background-color: rgb(61, 131, 216);
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  padding: 5px 10px;
+  width: fit-content;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.city a {
+  text-decoration: none;
+  color: white;
+}

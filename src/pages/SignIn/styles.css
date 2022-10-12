@@ -1,0 +1,37 @@
+.container{
+width: 100vw;
+height: 100vh;
+background-color: cadetblue;
+display: grid;
+align-items: center;
+justify-content: center;
+}
+
+.signin{
+    width: 40vw;
+    min-height: 80vh;
+    margin: auto;
+    margin-top: auto;
+    border-radius: 10px;
+    padding: 1em;
+    background-color: white;
+}
+
+.signin h2{
+    text-align: center;
+}
+
+.form-signin{
+    display: grid;
+    grid-auto-flow: row;
+    margin: 1.2em auto;
+}
+
+.form-signin input{
+    margin-bottom: 1em;
+}
+
+.form-signin button{
+    width: fit-content;
+    padding: 5px;
+}

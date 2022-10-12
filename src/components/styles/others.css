@@ -1,0 +1,12 @@
+.loading {
+  font-size: 3em;
+  min-height: 3000px;
+}
+
+.no-loading-image {
+  text-align: center;
+  background-image: linear-gradient(rgb(224, 203, 203), rgb(176, 176, 208));
+  font-size: 2em;
+  width: 100%;
+  height: 100%;
+}

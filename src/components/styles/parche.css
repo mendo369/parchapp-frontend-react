@@ -1,0 +1,78 @@
+.list-of-parches {
+  min-height: 2000px;
+}
+
+.parche {
+  border: 1px solid black;
+  margin: 20px 0;
+  padding: 10px;
+}
+
+.header {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 1em;
+  justify-content: left;
+  align-items: center;
+}
+
+.img-user {
+  width: fit-content;
+}
+
+.img-user img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.info-published {
+  row-gap: 5px;
+}
+
+.info-published h3 {
+  width: fit-content;
+}
+
+.geo {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+}
+
+.texto-description {
+  margin: 10px 0;
+  font-size: 1.1em;
+}
+
+.texto-description span {
+  background-color: rgb(67, 118, 236);
+  color: white;
+  font-size: 1.1em;
+  font-weight: bold;
+  border-radius: 20px;
+  padding: 0px 10px;
+}
+
+.slider img {
+  width: 250px;
+  height: 200px;
+}
+
+/* FOOTER */
+
+.footer {
+  margin-top: 20px;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 2em;
+  justify-content: left;
+  align-items: center;
+}
+
+.like,
+.comments {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+}

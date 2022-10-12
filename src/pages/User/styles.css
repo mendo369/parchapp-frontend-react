@@ -1,0 +1,23 @@
+.user-profile{
+    min-height: 100vh;
+    margin: 0 10px;
+    display: grid;
+    grid-template-columns: 10vw 1fr;
+    padding: 10px 0;
+}
+
+.user-info{
+    border-right: 1px solid black;
+    display: grid;
+    grid-auto-flow: row;
+}
+
+.user-info img{
+    width: 5em;
+    border-radius: 50%;
+}
+
+.user-info div{
+    display: initial;
+}
+

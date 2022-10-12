@@ -1,0 +1,39 @@
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: cadetblue;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    }
+    
+    .signup{
+        width: 40vw;
+        min-height: 80vh;
+        margin: auto;
+        margin-top: auto;
+        border-radius: 10px;
+        padding: 1em;
+        background-color: white;
+    }
+    
+    .signup h2{
+        text-align: center;
+    }
+    
+    .form-signup{
+        display: grid;
+        grid-auto-flow: row;
+        margin: 1.2em auto;
+    }
+    
+    .form-signup input{
+        margin-bottom: 1em;
+    }
+    
+    .form-signup button{
+        width: fit-content;
+        padding: 5px;
+    }
+
+    
