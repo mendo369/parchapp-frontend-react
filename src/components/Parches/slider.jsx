@@ -14,6 +14,9 @@ import "../styles/slider.css";
 import { Pagination } from "swiper";
 
 function slider({ images }) {
+  if (!images) {
+    return <></>;
+  }
   return (
     <>
       <Swiper

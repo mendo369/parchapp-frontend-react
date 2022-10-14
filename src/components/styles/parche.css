@@ -22,8 +22,8 @@
 
 .img-user img {
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  width: 60px;
+  height: 60px;
 }
 
 .info-published {
@@ -75,4 +75,5 @@
   display: grid;
   grid-auto-flow: column;
   align-items: center;
+  cursor: pointer;
 }

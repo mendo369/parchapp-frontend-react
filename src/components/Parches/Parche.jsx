@@ -13,10 +13,10 @@ function Parche({ parche }) {
     <div className="parche">
       <div className="header">
         <div className="img-user">
-          <img src={parche.user.url} alt="user profile" />
+          <img src={parche.user.avatar} alt="user profile" />
         </div>
         <div className="info-published">
-          <h2 className="user-name">{parche.user.name}</h2>
+          <h2 className="user-name">{parche.user.userName}</h2>
           <h3 className="date">{parche.date}</h3>
           <h3 className="geo">
             {parche.city}{" "}
@@ -39,14 +39,15 @@ function Parche({ parche }) {
           <span>
             <img src={like} alt="like" />
           </span>
-          {parche.likes}
+          {parche.likes.length}
         </div>
-        <div className="comments">
+        {/* Luego implementaremos los comentarios*/}
+        {/* <div className="comments">
           <span>
             <img src={comment} alt="comments" />
           </span>
           {parche.comments}
-        </div>
+        </div> */}
       </div>
     </div>
   );

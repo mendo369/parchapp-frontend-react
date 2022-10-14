@@ -47,7 +47,10 @@ nav {
 }
 
 .user-section{
-
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  gap: 1em;
 }
 
 .user-avatar{

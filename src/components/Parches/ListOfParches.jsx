@@ -8,7 +8,7 @@ function ListOfParches({ parches }) {
   return (
     <section className="list-of-parches">
       {parches.map((parche) => (
-        <Parche parche={parche} />
+        <Parche parche={parche} key={parche.id} />
       ))}
     </section>
   );
