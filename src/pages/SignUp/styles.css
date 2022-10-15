@@ -43,4 +43,10 @@
         width: 4em;
     }
 
-    
+    p{
+        text-align: center;
+    }
+
+    button{
+        margin: auto;
+    }

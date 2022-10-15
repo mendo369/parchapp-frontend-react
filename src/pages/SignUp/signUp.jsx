@@ -44,7 +44,11 @@ function signUp() {
         <section className="avatars">
           <h3>Chose your avatar</h3>
           <section className="select-avatar">
-            <AvatarsList avatars={avatars} setState={setAvatar} />
+            <AvatarsList
+              avatars={avatars}
+              setState={setAvatar}
+              avatarR={avatar}
+            />
           </section>
         </section>
 
@@ -94,7 +98,9 @@ function signUp() {
 
           <button>Submit</button>
         </form>
-        <Link to="/">Regresar a la página principal</Link>
+        <p>
+          <Link to="/">Regresar a la página principal</Link>
+        </p>
         <p>
           ¿Ya tienes una cuenta?{" "}
           <span>

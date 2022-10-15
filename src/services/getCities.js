@@ -1,6 +1,6 @@
 const URL = "http://localhost:4369/api/cities";
 
-export default function obtenerParches() {
+export default function getCities() {
   return fetch(URL)
     .then((res) => res.json())
     .then((response) => response);

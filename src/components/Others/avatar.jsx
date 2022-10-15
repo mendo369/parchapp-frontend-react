@@ -1,14 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 
-import useUser from "../../hooks/useUser";
-
-function avatar({ avatar, setState }) {
+function avatar({ avatar, setState, avatarR }) {
   const handleClick = (avatar) => {
     setState(avatar);
-    console.log("handleClick setAvatar", avatar);
   };
   return (
-    <div className="avatar" onClick={() => handleClick(avatar)}>
+    <div
+      className={avatar === avatarR ? "avatar-selected" : "avatar"}
+      onClick={() => handleClick(avatar)}
+    >
       <img src={avatar} alt={avatar} />
     </div>
   );

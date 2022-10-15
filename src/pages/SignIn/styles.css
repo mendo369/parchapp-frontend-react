@@ -12,7 +12,7 @@ justify-content: center;
 }
 .signin{
     width: 40vw;
-    min-height: 80vh;
+    min-height: 60vh;
     margin: auto;
     margin-top: auto;
     border-radius: 10px;
@@ -37,4 +37,12 @@ justify-content: center;
 .form-signin button{
     width: fit-content;
     padding: 5px;
+}
+
+p{
+    text-align: center;
+}
+
+button{
+    margin: auto;
 }

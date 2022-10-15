@@ -1,7 +1,7 @@
-const ENDPOINT = "http://localhost:4369/api/auth/login";
+const ENDPOINT = "http://localhost:4369/api/";
 
 export default function login({ userName, password }) {
-  return fetch(ENDPOINT, {
+  return fetch(`${ENDPOINT}auth/login`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -9,7 +9,7 @@ export default function login({ userName, password }) {
     body: JSON.stringify({ userName, password }),
   }).then((res) => {
     if (!res.ok) {
-      throw new Error("Response is no OK");
+      throw new Error(res.statusText);
     }
     return res.json();
   });

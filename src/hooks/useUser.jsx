@@ -19,8 +19,12 @@ function useUser() {
         .then((res) => {
           const { userName, name, avatar, token } = res;
           setUser({ userName, name, avatar, token });
+          navigate("/");
+          console.log("respuesta del login", res);
         })
-        .catch((err) => console.error(err));
+        .catch((err) => {
+          alert(`error: ${err.message} | User or password invalid`);
+        });
     },
     [setUser]
   );
@@ -39,9 +43,20 @@ function useUser() {
         email: userRegister.email,
         avatar: userRegister.avatar,
         password: userRegister.password,
-      }).then((res) => {
-        console.log("respuesta al register", res);
-      });
+      })
+        .then((res) => {
+          console.log("respuesta al register", res);
+        })
+        .then(() => {
+          navigate("/");
+          login({
+            userName: userRegister.userName,
+            password: userRegister.password,
+          });
+        })
+        .catch((err) => {
+          console.error("error en register", err);
+        });
     },
     [setUser]
   );

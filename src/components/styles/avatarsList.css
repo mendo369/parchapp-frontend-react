@@ -23,3 +23,17 @@
     height: 50px;
     object-fit: cover;
 }
+.avatar-selected img{
+    width:55px;
+    height: 55px;
+    object-fit: cover;
+}
+
+.avatar-selected{
+    border: 2px solid green;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+}
