@@ -6,7 +6,10 @@
     align-items: center;
     justify-content: center;
     }
-    
+    .logo{
+        margin: auto;
+        margin-bottom: 0.5em;
+    }
     .signup{
         width: 40vw;
         min-height: 80vh;
@@ -34,6 +37,10 @@
     .form-signup button{
         width: fit-content;
         padding: 5px;
+    }
+
+    .select-avatar img{
+        width: 4em;
     }
 
     

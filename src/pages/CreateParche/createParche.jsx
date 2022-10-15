@@ -9,7 +9,7 @@ import Logo from "../../components/Others/logo";
 import "./styles.css";
 
 function createParche() {
-  const { createParche, user } = useUser();
+  const { createParche } = useUser();
   const [city, setCity] = useState("");
   const [place, setPlace] = useState("");
   const [description, setDescription] = useState("");
@@ -44,15 +44,11 @@ function createParche() {
 
     let results = await response.json();
     let pathFiles = results.pathFiles;
-    // setMedia(await pathFiles);
-
-    // console.log("esto lo retorna insertFiles", pathFiles);
     return pathFiles;
   };
 
   return (
     <section className="container">
-      <h1>{user.token}</h1>
       <section className="create-parche-section">
         <div className="logo">
           <Logo />

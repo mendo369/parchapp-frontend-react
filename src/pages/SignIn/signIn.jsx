@@ -26,7 +26,9 @@ function signIn() {
   return (
     <section className="container">
       <section className="signin">
-        <Logo />
+        <div className="logo">
+          <Logo />
+        </div>
         <h2>Sign in</h2>
         <form onSubmit={handleSubmit} className="form-signin">
           <label htmlFor="userName">User</label>
