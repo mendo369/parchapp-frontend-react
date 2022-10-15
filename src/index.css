@@ -12,3 +12,7 @@ html {
 .app-parches {
   min-height: 2000px;
 }
+
+a{
+  text-decoration: none;
+}

@@ -2,28 +2,45 @@ import React, { useState } from "react";
 
 import { Link, useLocation } from "wouter";
 import useUser from "../../hooks/useUser";
-// import createParcheService from "../../services/createParche.js";
+import getCategories from "../Home/getCategories";
 
 import Logo from "../../components/Others/logo";
 
 import "./styles.css";
+import { useEffect } from "react";
 
 function createParche() {
   const { createParche } = useUser();
+  const [, navigate] = useLocation();
+  const [categories, setCategories] = useState([]);
+
+  const [category, setCategory] = useState("");
   const [city, setCity] = useState("");
   const [place, setPlace] = useState("");
   const [description, setDescription] = useState("");
   const [files, setFiles] = useState();
-  // const [media, setMedia] = useState([]);
-  const [, navigate] = useLocation();
+
+  useEffect(() => {
+    getCategories().then((res) => {
+      setCategories(res);
+      console.log("categories: ", categories);
+      console.log("res categories: ", res);
+    });
+  }, []);
+
+  useEffect(() => {
+    console.log(category);
+  }, [category]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     const paths = await insertFiles();
 
-    console.log("paths: ", paths);
-    createParche({ parche: { city, place, description, media: paths } });
+    createParche({
+      parche: { city, place, category, description, media: paths },
+    });
     navigate("/");
+    // console.table([city, place, category, description, paths]);
   };
 
   const uploadFiles = (e) => {
@@ -54,9 +71,10 @@ function createParche() {
           <Logo />
         </div>
         <h2>Create parche</h2>
+        <br />
         <form className="create-parche-form" onSubmit={handleSubmit}>
           <div className="geo">
-            <label htmlFor="city">City</label>
+            <label htmlFor="city">City:</label>
             <input
               type="text"
               value={city}
@@ -64,7 +82,7 @@ function createParche() {
               placeholder="City"
               onChange={(e) => setCity(e.target.value)}
             />
-            <label htmlFor="place">Place</label>
+            <label htmlFor="place">Place:</label>
             <input
               type="text"
               value={place}
@@ -73,14 +91,44 @@ function createParche() {
               onChange={(e) => setPlace(e.target.value)}
             />
           </div>
+          <br />
+          <div className="categories">
+            <label htmlFor="categories">Category</label>
+            <select
+              name="categories"
+              onChange={(e) => setCategory(e.target.value)}
+            >
+              <option disabled selected>
+                Category
+              </option>
+              {categories.map((category) => {
+                return (
+                  <option value={category.type} key={category.type}>
+                    {category.type}
+                  </option>
+                );
+              })}
+            </select>
+          </div>
+          <br />
           <label htmlFor="description">Description</label>
-          <input
-            type="text"
+          <textarea
+            name="description"
+            cols="30"
+            rows="10"
+            maxLength={150}
+            res
+            placeholder="Description | Max. 150 characteres"
+            onChange={(e) => setDescription(e.target.value)}
             value={description}
+          ></textarea>
+          {/* <input
+            value={description}
+            type="text"
             name="description"
             placeholder="Description"
             onChange={(e) => setDescription(e.target.value)}
-          />
+          /> */}
           <label htmlFor="add-media">Add media</label>
           <small>
             If you are in a pc, press Ctrl and then click over files

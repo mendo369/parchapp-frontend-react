@@ -10,6 +10,7 @@ export default function createParche({ parche, token }) {
     body: JSON.stringify({
       city: parche.city,
       place: parche.place,
+      category: parche.category,
       description: parche.description,
       media: parche.media,
     }),

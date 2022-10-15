@@ -89,23 +89,17 @@ function signUp() {
             onChange={(e) => setPassword(e.target.value)}
           />
 
-          {/* <label htmlFor="confirmPassword">Confirm password</label>
-          <input
-            type="password"
-            placeholder="Confirm password"
-            name="confirmPassword"
-          /> */}
-
           <button>Submit</button>
         </form>
-        <p>
-          <Link to="/">Regresar a la página principal</Link>
-        </p>
         <p>
           ¿Ya tienes una cuenta?{" "}
           <span>
             <Link to="/auth/signin">Ingresa aquí</Link>
           </span>
+        </p>
+        <br />
+        <p>
+          <Link to="/">Regresar a la página principal</Link>
         </p>
       </section>
     </section>

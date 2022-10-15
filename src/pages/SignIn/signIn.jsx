@@ -50,15 +50,16 @@ function signIn() {
           <button>Submit</button>
         </form>
         <br />
-        <p>
-          <Link to="/">Regresar a la página principal</Link>
-        </p>
-        <br />
+
         <p>
           ¿No tienes una cuenta? crea una{" "}
           <span>
             <Link to="/auth/signup">aquí</Link>
           </span>
+        </p>
+        <br />
+        <p>
+          <Link to="/">Regresar a la página principal</Link>
         </p>
       </section>
     </section>

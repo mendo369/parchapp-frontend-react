@@ -17,18 +17,26 @@ function Parche({ parche }) {
         </div>
         <div className="info-published">
           <h2 className="user-name">{parche.user.userName}</h2>
-          <h3 className="date">{parche.date}</h3>
-          <h3 className="geo">
-            {parche.city}{" "}
-            <span>
+          <h3 className="date">{parche.date.split("T")[0]}</h3>
+          <div className="geo-category">
+            <h3 className="geo">
+              {parche.city}{" "}
+              {/* <span>
               <img src={mapPin} alt="map-pin" />
-            </span>
-          </h3>
+            </span> */}
+            </h3>
+            <h3 className="category">
+              {parche.category}{" "}
+              {/* <span>
+              <img src={mapPin} alt="map-pin" />
+            </span> */}
+            </h3>
+          </div>
         </div>
       </div>
       <div className="body">
         <div className="description">
-          <p className="texto-description">
+          <p className="text-description">
             <span>{parche.place}</span> {parche.description}
           </p>
         </div>

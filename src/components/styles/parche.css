@@ -3,15 +3,19 @@
 }
 
 .parche {
-  border: 1px solid black;
-  margin: 20px 0;
+  width: 80%;
+  margin: 20px auto;
   padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.8);
 }
 
 .header {
+  width: fit-content;
+  margin-left: 2em;
   display: grid;
   grid-auto-flow: column;
-  gap: 1em;
+  gap: 2em;
   justify-content: left;
   align-items: center;
 }
@@ -27,6 +31,8 @@
 }
 
 .info-published {
+  display: grid;
+  grid-auto-flow: row;
   row-gap: 5px;
 }
 
@@ -34,19 +40,33 @@
   width: fit-content;
 }
 
-.geo {
+.geo-category {
   display: grid;
   grid-auto-flow: column;
   align-items: center;
+  justify-content: start;
+  gap: 10px;
 }
 
-.texto-description {
-  margin: 10px 0;
+.geo-category .geo {
+  background-color: blueviolet;
+  color: white;
+  padding: 2px;
+}
+.category {
+  background-color: green;
+  color: white;
+  padding: 2px;
+}
+
+.text-description {
+  margin: 2em 2em;
   font-size: 1.1em;
+  float: left;
 }
 
-.texto-description span {
-  background-color: rgb(67, 118, 236);
+.text-description span {
+  background-color: rgb(49, 122, 238);
   color: white;
   font-size: 1.1em;
   font-weight: bold;
@@ -55,7 +75,7 @@
 }
 
 .slider img {
-  width: 250px;
+  width: 3000px;
   height: 200px;
 }
 
@@ -76,4 +96,10 @@
   grid-auto-flow: column;
   align-items: center;
   cursor: pointer;
+}
+
+.like img {
+  margin-right: 5px;
+  background-color: rgb(49, 122, 238);
+  border-radius: 50%;
 }

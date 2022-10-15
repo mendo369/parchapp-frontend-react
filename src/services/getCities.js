@@ -1,4 +1,4 @@
-const URL = "http://localhost:4369/api/cities";
+const URL = "http://localhost:4369/api/parches/cities";
 
 export default function getCities() {
   return fetch(URL)
