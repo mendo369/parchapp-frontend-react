@@ -10,7 +10,7 @@ function usuario() {
       {isLogged ? (
         <section className="user-section">
           <button>
-            <Link to="/user/create">Add Parche</Link>
+            <Link to="/user/create">Add Parche 🎠</Link>
           </button>
           <Link to="/user/profile">
             <img src={user.avatar} alt={user} className="user-avatar" />

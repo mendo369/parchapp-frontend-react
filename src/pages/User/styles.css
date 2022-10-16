@@ -1,23 +1,102 @@
-.user-profile{
-    min-height: 100vh;
-    margin: 0 10px;
-    display: grid;
-    grid-template-columns: 10vw 1fr;
-    padding: 10px 0;
+.user-profile {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 20vw 1fr;
 }
 
-.user-info{
-    border-right: 1px solid black;
-    display: grid;
-    grid-auto-flow: row;
+.user-info {
+  box-shadow: 0px 1px 4px black;
+  display: grid;
+  grid-auto-flow: row;
+  background-image: linear-gradient(90deg, #6a11cb, #3376e1);
+  color: white;
 }
 
-.user-info img{
-    width: 5em;
-    border-radius: 50%;
+.user-profile .user-avatar {
+  width: fit-content;
+  height: fit-content;
+  padding: 0;
+  margin: auto;
 }
 
-.user-info div{
-    display: initial;
+.user-profile .user-avatar img {
+  width: 15vw;
+  height: 15vw;
+  border: 3px solid white;
+  border-radius: 50%;
 }
 
+.user-profile .user-names h2,
+.user-profile .user-names h3 {
+  margin: 10px auto 10px;
+  width: fit-content;
+}
+
+.user-info div {
+  display: initial;
+}
+/* 
+.option-views {
+  display: grid;
+  grid-template-rows: 10vh 1fr;
+}
+
+.option-views .options {
+  width: 100%;
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  box-shadow: 0px 1px 2px black;
+  border-bottom: 2px solid black;
+}
+
+.options button {
+  width: fit-content;
+  border: none;
+  background-color: white;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  padding: 5px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.options button:hover {
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+} */
+
+.logout-button {
+  width: fit-content;
+  border: none;
+  background-color: white;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  padding: 5px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+}
+
+.parches-added-for-user {
+  overflow-y: scroll;
+  max-height: 100vh;
+  margin: 0%;
+}
+
+.user-info .return-button {
+  margin-top: 10px;
+  width: fit-content;
+  border: none;
+  background-color: white;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  padding: 5px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.user-info .return-button:hover {
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+}

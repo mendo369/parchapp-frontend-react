@@ -20,13 +20,13 @@ function Parche({ parche }) {
           <h3 className="date">{parche.date.split("T")[0]}</h3>
           <div className="geo-category">
             <h3 className="geo">
-              {parche.city}{" "}
+              🏙️ {parche.city}
               {/* <span>
               <img src={mapPin} alt="map-pin" />
             </span> */}
             </h3>
             <h3 className="category">
-              {parche.category}{" "}
+              🔰 {parche.category}
               {/* <span>
               <img src={mapPin} alt="map-pin" />
             </span> */}

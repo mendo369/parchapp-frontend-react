@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import { Link, useLocation } from "wouter";
 import useUser from "../../hooks/useUser";
-import getCategories from "../Home/getCategories";
+import getCategories from "../../services/getCategories";
 
 import Logo from "../../components/Others/logo";
 
@@ -89,6 +89,7 @@ function createParche() {
               name="place"
               placeholder="Place"
               onChange={(e) => setPlace(e.target.value)}
+              autoComplete="off"
             />
           </div>
           <br />
@@ -98,7 +99,7 @@ function createParche() {
               name="categories"
               onChange={(e) => setCategory(e.target.value)}
             >
-              <option disabled selected>
+              <option disabled selected value={category}>
                 Category
               </option>
               {categories.map((category) => {
@@ -130,9 +131,9 @@ function createParche() {
             onChange={(e) => setDescription(e.target.value)}
           /> */}
           <label htmlFor="add-media">Add media</label>
-          <small>
+          {/* <small>
             If you are in a pc, press Ctrl and then click over files
-          </small>
+          </small> */}
           <section className="upload-media" name="add-media">
             {/* <div className="custom-input-file"> */}
             <input

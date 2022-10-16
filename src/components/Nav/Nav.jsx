@@ -10,11 +10,11 @@ import "../styles/nav.css";
 function Nav() {
   return (
     <nav>
-      <Logo></Logo>
-      <Search></Search>
-      <Usuario />
-      {/* <Link to="/auth/signin">Sign In</Link> */}
-      {/* <Link to="/auth/signup">Sign Up</Link> */}
+      <div className="container-nav">
+        <Logo></Logo>
+        <Search></Search>
+        <Usuario />
+      </div>
     </nav>
   );
 }

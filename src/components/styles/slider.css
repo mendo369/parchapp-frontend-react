@@ -4,6 +4,7 @@
 }
 
 .swiper-slide {
+  width: fit-content;
   text-align: center;
   font-size: 18px;
   background: #fff;

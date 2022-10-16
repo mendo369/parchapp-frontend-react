@@ -1,15 +1,16 @@
-import { useContext, useCallback } from "react";
+import { useContext, useCallback, useEffect } from "react";
 
 import { useLocation } from "wouter";
+import debounce from "just-debounce-it";
 
 import Context from "../context/UserContext";
 import loginService from "../services/login";
 import registerService from "../services/register";
+import getParchesUserService from "../services/getParchesUser";
 import createParcheService from "../services/createParche";
-import { useEffect } from "react";
 
 function useUser() {
-  const { user, setUser } = useContext(Context);
+  const { user, setUser, parchesU, setParchesU } = useContext(Context);
   const [, navigate] = useLocation();
 
   //con el useCallback evitamos que se cree la función cada que se cambia este componente, evitando así un loop infinito
@@ -61,6 +62,15 @@ function useUser() {
     [setUser]
   );
 
+  const getParchesUser = useCallback(
+    debounce(() =>
+      getParchesUserService({ token: user.token }).then((res) => {
+        setParchesU(res.parches);
+      }, 1000)
+    ),
+    [setParchesU]
+  );
+
   const logout = useCallback(() => {
     setUser({});
     navigate("/");
@@ -69,6 +79,8 @@ function useUser() {
   return {
     isLogged: Boolean(user.token),
     user,
+    getParchesUser,
+    parchesU,
     login,
     register,
     createParche,
