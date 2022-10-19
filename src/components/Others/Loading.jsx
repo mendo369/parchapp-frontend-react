@@ -5,7 +5,7 @@ import "../styles/others.css";
 function Loading() {
   return (
     <section className="loading-section">
-      <i className="loading">Loading 🏄</i>;
+      <i className="loading">Loading 🏄</i>
     </section>
   );
 }

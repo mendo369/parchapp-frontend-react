@@ -35,6 +35,7 @@ function createParche() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const paths = await insertFiles();
+    const cityUpper = city.split("")[0].toUpperCase() + city.substring(1);
 
     createParche({
       parche: { city, place, category, description, media: paths },
@@ -150,7 +151,15 @@ function createParche() {
             {/* subir imagenes */}
             {/* </div> */}
           </section>
+
           <button>Create</button>
+          <button
+            onClick={() => {
+              navigate("/");
+            }}
+          >
+            Cancelar
+          </button>
         </form>
       </section>
     </section>

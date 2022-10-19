@@ -31,20 +31,38 @@ function home() {
 
   return (
     <section className="parchapp-app">
-      <Nav />
-      <div className="app-main">
-        <div className="app-parches">
-          {loading ? (
-            <Loading />
-          ) : (
-            <>
-              <ListOfParches parches={parches} />
-              <div id="visor" ref={externalRef}></div>
-            </>
-          )}
-        </div>
-        <div className="app-cities">
-          <Cities />
+      <div className="container-parchapp">
+        <Nav />
+        <div className="app-main">
+          <div className="app-parches">
+            {loading ? (
+              <Loading />
+            ) : (
+              <>
+                <ListOfParches parches={parches} />
+                <div id="visor" ref={externalRef}></div>
+              </>
+            )}
+          </div>
+          <div className="app-cities">
+            <Cities />
+          </div>
+          {/* <Nav />
+        <div className="app-main">
+          <div className="app-parches">
+            {loading ? (
+              <Loading />
+            ) : (
+              <>
+                <ListOfParches parches={parches} />
+                <div id="visor" ref={externalRef}></div>
+              </>
+            )}
+          </div>
+          <div className="app-cities">
+            <Cities />
+          </div>
+        </div> */}
         </div>
       </div>
     </section>

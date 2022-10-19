@@ -1,3 +1,40 @@
 .parchapp-app {
+  /* width: 100%; */
+  /* background-image: url("../../assets/ciudad.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-height: 100vh; */
+}
+
+.parchapp-app .container-parchapp {
+  /* background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  font-family: sans-serif;
+  text-align: center;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(10px);
   width: 100%;
+  height: 100%;
+  min-height: 100vh; */
+}
+
+.container-parchapp .app-main {
+  padding: 0;
+  overflow-y: scroll;
+  max-height: 85vh;
+  margin: 0%;
+  scrollbar-color: rgb(0, 162, 255) rgba(0, 0, 0, 0);
+  scrollbar-width: thin;
+}
+
+@media (max-width: 400px) {
+  .container-parchapp .app-main .app-cities {
+    display: none;
+  }
+}
+@media (max-width: 340px) {
+  .container-parchapp .app-main {
+    max-height: 90vh;
+  }
 }

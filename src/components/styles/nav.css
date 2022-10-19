@@ -1,16 +1,17 @@
 nav {
   width: 100%;
-  background-image: linear-gradient(180deg, #6a11cb, #3376e1);
+  background-image: linear-gradient(180deg, #6a11cb, #5933e1);
+  overflow: hidden;
 }
 
 nav .container-nav {
   width: 80vw;
   display: grid;
   grid-auto-flow: column;
-  /* justify-content: space-between; */
   grid-template-columns: 20% 1fr max-content;
   align-items: center;
-  margin: 0px auto 40px;
+  margin: 0px auto;
+  height: 15vh;
 }
 
 /* LOGO */
@@ -37,7 +38,6 @@ nav .container-nav {
 .search form input {
   outline: none;
   border: none;
-  margin-right: 2px;
 }
 
 /* USER */
@@ -90,4 +90,61 @@ nav .container-nav {
 
 .user-section button:hover {
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
+}
+
+@media (max-width: 700px) {
+  nav .container-nav {
+    width: 90%;
+  }
+
+  .user-section .user-avatar {
+    width: 4em;
+    height: 4em;
+  }
+
+  nav .logo {
+    margin-bottom: 0;
+    width: 20vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .user-section button {
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  nav .container-nav {
+    width: 95%;
+  }
+
+  nav .search {
+    width: fit-content;
+    margin: auto;
+  }
+}
+
+@media (max-width: 340px) {
+  .user-section .user-avatar {
+    width: 3.5em;
+    height: 3.5em;
+  }
+
+  nav .container-nav .search {
+    grid-template-columns: 30% 30% 1fr;
+  }
+
+  nav .logo {
+    margin-bottom: 0;
+    width: 30vw;
+  }
+
+  nav .user-section {
+    width: fit-content;
+  }
+
+  nav .container-nav {
+    max-height: 10vh;
+  }
 }

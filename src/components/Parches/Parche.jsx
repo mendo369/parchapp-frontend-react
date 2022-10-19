@@ -4,9 +4,7 @@ import Slider from "./slider";
 
 import "../styles/parche.css";
 
-import mapPin from "../../assets/map-pin.svg";
-import like from "../../assets/like.svg";
-import comment from "../../assets/comment.svg";
+import like from "../../assets/like.svg"
 
 function Parche({ parche }) {
   return (
@@ -19,17 +17,10 @@ function Parche({ parche }) {
           <h2 className="user-name">{parche.user.userName}</h2>
           <h3 className="date">{parche.date.split("T")[0]}</h3>
           <div className="geo-category">
-            <h3 className="geo">
-              🏙️ {parche.city}
-              {/* <span>
-              <img src={mapPin} alt="map-pin" />
-            </span> */}
-            </h3>
+            <h3 className="geo">🏙️ {parche.city}</h3>
             <h3 className="category">
-              🔰 {parche.category}
-              {/* <span>
-              <img src={mapPin} alt="map-pin" />
-            </span> */}
+              <span className={parche.category}></span>
+              {parche.category}
             </h3>
           </div>
         </div>

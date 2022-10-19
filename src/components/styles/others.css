@@ -1,6 +1,14 @@
-.loading {
+.loading-section .loading {
   font-size: 3em;
-  min-height: 3000px;
+  min-height: 100%;
+  width: fit-content;
+  margin: auto;
+}
+
+.loading-section {
+  width: 100%;
+  display: grid;
+  justify-content: center;
 }
 
 .no-loading-image {

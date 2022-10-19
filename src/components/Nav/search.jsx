@@ -8,12 +8,6 @@ function search({ onSubmit }) {
   const [keyword, setKeyword] = useState("");
   const [path, pushLocation] = useLocation();
 
-  // const handleSubmitSearchForm = useCallback(
-  //   ({ keyword }) => {
-  //     pushLocation(`/search/${keyword}`);
-  //   },
-  //   [pushLocation]
-  // );
   const handleChange = (evt) => {
     setKeyword(evt.target.value);
   };
@@ -21,7 +15,6 @@ function search({ onSubmit }) {
   const handleSubmit = (evt) => {
     evt.preventDefault();
     pushLocation(`/search/${keyword}`);
-    // onSubmit({ keyword });
   };
 
   return (

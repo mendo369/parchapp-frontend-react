@@ -9,10 +9,6 @@ html {
   font-family: monospace;
 }
 
-.app-parches {
-  min-height: 2000px;
-}
-
-a{
+a {
   text-decoration: none;
 }

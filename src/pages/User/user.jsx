@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
 import { useLocation } from "wouter";
+import { Link } from "wouter";
 
 import useUser from "../../hooks/useUser";
 
@@ -30,10 +31,14 @@ function user() {
         </div>
         <div className="info-parches-user">
           <p>{parchesU.length} parches subidos 😎</p>
+          <br />
+          <button>
+            <Link to="/user/create">Add Parche 🎠</Link>
+          </button>
         </div>
 
         <button onClick={logout} className="logout-button">
-          Logout
+          Logout 🚪
         </button>
       </section>
 

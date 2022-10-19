@@ -1,6 +1,6 @@
 .container {
   width: 100vw;
-  height: 100%;
+  max-width: 100vw;
   background-color: cadetblue;
   display: grid;
   align-items: center;
@@ -12,7 +12,7 @@
 }
 .signup {
   width: 40vw;
-  min-height: 80vh;
+  min-height: fit-content;
   margin: auto;
   margin-top: auto;
   border-radius: 10px;
@@ -54,7 +54,7 @@
   margin: auto;
 }
 
-p {
+.signup p {
   text-align: center;
 }
 
@@ -82,4 +82,51 @@ label {
 
 .signup a:hover {
   font-weight: bold;
+}
+
+@media (max-width: 900px) {
+  .container .signup {
+    width: 50vw;
+  }
+}
+
+@media (max-width: 700px) {
+  .container {
+    height: 100%;
+  }
+  .container .signup {
+    width: 60vw;
+  }
+
+  .signup .logo {
+    width: 30vw;
+  }
+}
+
+@media (max-width: 550px) {
+  .signup .select-avatar {
+    width: 100%;
+  }
+  .signup .select-avatar .avatar-list {
+    margin: 0;
+  }
+
+  .form-signup input {
+    width: 60%;
+  }
+}
+
+@media (max-width: 400px) {
+  .container .signup {
+    width: 90vw;
+  }
+  .form-signup input {
+    width: 70%;
+  }
+  .signup .logo {
+    width: 40vw;
+  }
+  .select-avatar img {
+    width: 100%;
+  }
 }

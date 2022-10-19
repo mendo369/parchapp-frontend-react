@@ -12,7 +12,7 @@
 }
 .signin {
   width: 40vw;
-  min-height: 60vh;
+  min-height: fit-content;
   margin: auto;
   margin-top: auto;
   border-radius: 10px;
@@ -45,7 +45,7 @@
   padding: 5px;
 }
 
-p {
+.signin p {
   text-align: center;
 }
 
@@ -77,4 +77,38 @@ label {
 
 .signin a:hover {
   font-weight: bold;
+}
+
+@media (max-width: 700px) {
+  .container .signin {
+    width: 60vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .form-signin input {
+    width: 60%;
+  }
+
+  .logo {
+    width: 30vw;
+  }
+}
+
+@media (max-width: 400px) {
+  .container .signin {
+    width: 70vw;
+  }
+}
+
+@media (max-width: 330px) {
+  .container .signin {
+    width: 80vw;
+  }
+  .form-signin input {
+    width: 70%;
+  }
+  .logo {
+    width: 40vw;
+  }
 }
