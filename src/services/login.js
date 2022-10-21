@@ -1,4 +1,4 @@
-const ENDPOINT = "http://localhost:4369/api/";
+const ENDPOINT = "https://parchapp.herokuapp.com/api/";
 
 export default function login({ userName, password }) {
   return fetch(`${ENDPOINT}auth/login`, {

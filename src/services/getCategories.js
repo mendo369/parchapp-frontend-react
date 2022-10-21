@@ -1,4 +1,4 @@
-const URL = "http://localhost:4369/api/parches/categories";
+const URL = "https://parchapp.herokuapp.com/api/parches/categories";
 
 export default function getCategories() {
   return fetch(URL)

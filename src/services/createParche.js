@@ -1,4 +1,4 @@
-const ENDPOINT = "http://localhost:4369/api/parches";
+const ENDPOINT = "https://parchapp.herokuapp.com/api/parches";
 
 export default function createParche({ parche, token }) {
   return fetch(ENDPOINT, {

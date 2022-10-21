@@ -1,4 +1,4 @@
-const URL = "http://localhost:4369/api/parches";
+const URL = "https://parchapp.herokuapp.com/api/parches";
 
 export default function getParches({
   keyword = null,

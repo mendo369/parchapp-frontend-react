@@ -55,10 +55,13 @@ function createParche() {
       f.append("file", files[index]);
     }
 
-    let response = await fetch("http://localhost:4369/api/parches/media", {
-      method: "POST",
-      body: f,
-    });
+    let response = await fetch(
+      "https://parchapp.herokuapp.com/api/parches/media",
+      {
+        method: "POST",
+        body: f,
+      }
+    );
 
     let results = await response.json();
     let pathFiles = results.pathFiles;

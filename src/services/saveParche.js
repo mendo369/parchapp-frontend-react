@@ -1,4 +1,4 @@
-const URL = "http://localhost:4369/api";
+const URL = "https://parchapp.herokuapp.com/api";
 
 export default function SaveParche({ id, token }) {
   fetch(`${URL}/parches/save`, {
