@@ -1,6 +1,6 @@
 import { Route } from "wouter";
 
-import { ParchesContextProvider } from "./context/parcheContext";
+import { ParchesContextProvider } from "./context/ParcheContext";
 import { UserContextProvider } from "./context/UserContext";
 
 import home from "./pages/Home/home";
