@@ -95,6 +95,7 @@ nav .container-nav {
 @media (max-width: 700px) {
   nav .container-nav {
     width: 90%;
+    grid-template-columns: 30% 1fr max-content;
   }
 
   .user-section .user-avatar {
@@ -104,7 +105,7 @@ nav .container-nav {
 
   nav .logo {
     margin-bottom: 0;
-    width: 20vw;
+    width: 25vw;
   }
 }
 

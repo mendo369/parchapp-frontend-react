@@ -61,7 +61,7 @@ function signUp() {
             value={userName}
             onChange={(e) => setUserName(e.target.value)}
             autoComplete="new-password"
-            spellcheck="false"
+            spellCheck="false"
           />
 
           <label htmlFor="name">Name</label>
@@ -72,7 +72,7 @@ function signUp() {
             value={name}
             onChange={(e) => setName(e.target.value)}
             autoComplete="new-password"
-            spellcheck="false"
+            spellCheck="false"
           />
 
           <label htmlFor="email">Email</label>
@@ -83,7 +83,7 @@ function signUp() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             autoComplete="new-password"
-            spellcheck="false"
+            spellCheck="false"
           />
 
           <label htmlFor="password">Password</label>
@@ -94,7 +94,7 @@ function signUp() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             autoComplete="new-password"
-            spellcheck="false"
+            spellCheck="false"
           />
 
           <button>Submit</button>

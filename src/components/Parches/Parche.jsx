@@ -1,12 +1,45 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
+import useUser from "../../hooks/useUser";
 import Slider from "./slider";
+import like from "../../assets/like.svg";
+import liked from "../../assets/liked.svg";
+import save from "../../assets/save.svg";
+import saved from "../../assets/saved.svg";
 
 import "../styles/parche.css";
 
-import like from "../../assets/like.svg"
-
 function Parche({ parche }) {
+  const { user, isLogged, Like, Save } = useUser();
+
+  const [likeState, setLike] = useState(false);
+  const [savedState, setSave] = useState(false);
+
+  useEffect(() => {
+    if (isLogged) {
+      const LIKED = parche.likes.some((like) => like == user.id);
+      if (LIKED) setLike(true);
+    }
+  }, []);
+
+  // useEffect(() => {
+  //   const SAVED = user.parchesSaved()
+  //   if(SAVED) setSave(true)
+  // }, []);
+
+  const handleLike = (id) => {
+    Like({ id });
+  };
+  const handleSave = (id) => {
+    Save({ id });
+  };
+  const handleRemoveLike = (id) => {
+    // Like({ id });
+  };
+  const handleRemoveSave = (id) => {
+    // Save({ id });
+  };
+
   return (
     <div className="parche">
       <div className="header">
@@ -34,11 +67,34 @@ function Parche({ parche }) {
         <Slider images={parche.media} />
       </div>
       <div className="footer">
-        <div className="like">
-          <span>
-            <img src={like} alt="like" />
+        <div className={likeState ? "liked" : "like"}>
+          <span
+            onClick={
+              isLogged
+                ? () => {
+                    setLike(!likeState);
+                    handleLike(parche.id);
+                  }
+                : () => alert("Debes iniciar sesión para poder dar like")
+            }
+          >
+            <img src={likeState ? liked : like} alt="like" />
           </span>
-          {parche.likes.length}
+          {likeState ? parche.likes.length + 1 : parche.likes.length}
+        </div>
+        <div className={savedState ? "saved" : "save"}>
+          <span
+            onClick={
+              isLogged
+                ? () => {
+                    setSave(!savedState);
+                    handleSave(parche.id);
+                  }
+                : () => alert("Debes iniciar sesión para poder guardar")
+            }
+          >
+            <img src={savedState ? saved : save} alt="save" />
+          </span>
         </div>
         {/* Luego implementaremos los comentarios*/}
         {/* <div className="comments">

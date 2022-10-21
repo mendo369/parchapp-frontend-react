@@ -9,7 +9,7 @@ export default function register({ userName, name, email, avatar, password }) {
     body: JSON.stringify({ userName, name, email, avatar, password }),
   }).then((res) => {
     if (!res.ok) {
-      throw new Error(res.message);
+      throw new Error(res.statusText);
     }
     return res.json();
   });

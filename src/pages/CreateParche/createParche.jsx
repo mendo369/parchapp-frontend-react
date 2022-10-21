@@ -75,23 +75,27 @@ function createParche() {
         <br />
         <form className="create-parche-form" onSubmit={handleSubmit}>
           <div className="geo">
-            <label htmlFor="city">City:</label>
-            <input
-              type="text"
-              value={city}
-              name="city"
-              placeholder="City"
-              onChange={(e) => setCity(e.target.value)}
-            />
-            <label htmlFor="place">Place:</label>
-            <input
-              type="text"
-              value={place}
-              name="place"
-              placeholder="Place"
-              onChange={(e) => setPlace(e.target.value)}
-              autoComplete="off"
-            />
+            <div className="add-city-parche">
+              <label htmlFor="city">City:</label>
+              <input
+                type="text"
+                value={city}
+                name="city"
+                placeholder="City"
+                onChange={(e) => setCity(e.target.value)}
+              />
+            </div>
+            <div className="add-place-parche">
+              <label htmlFor="place">Place:</label>
+              <input
+                type="text"
+                value={place}
+                name="place"
+                placeholder="Place"
+                onChange={(e) => setPlace(e.target.value)}
+                autoComplete="off"
+              />
+            </div>
           </div>
           <br />
           <div className="categories">

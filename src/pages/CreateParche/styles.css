@@ -36,6 +36,17 @@
 .create-parche-form .geo {
   display: grid;
   grid-auto-flow: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.add-city-parche,
+.add-place-parche {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .create-parche-form .geo input {
@@ -105,4 +116,39 @@
 
 .create-parche-section button:hover {
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
+}
+
+@media (max-width: 900px) {
+  .create-parche-section {
+    width: 50vw;
+  }
+}
+@media (max-width: 700px) {
+  .create-parche-section {
+    width: 60vw;
+  }
+}
+@media (max-width: 550px) {
+  .create-parche-section {
+    width: 70vw;
+  }
+}
+@media (max-width: 450px) {
+  .create-parche-section {
+    width: 80vw;
+  }
+}
+@media (max-width: 400px) {
+  .create-parche-form .geo {
+    grid-auto-flow: row;
+  }
+  .create-parche-form .geo input {
+    width: 80%;
+  }
+
+  .upload-media input {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+  }
 }
