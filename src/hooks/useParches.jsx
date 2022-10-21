@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from "react";
 import getParches from "../services/getParches";
-import ParcheContext from "../context/parcheContext";
+import ParcheContext from "../context/ParcheContext";
 
 const INITIAL_PAGE = 1;
 
