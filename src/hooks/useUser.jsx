@@ -68,7 +68,7 @@ function useUser() {
 
   const getParchesUser = useCallback(
     debounce(() =>
-      getParchesUserService({ token: user.token }).then((res) => {
+      getParchesUserService({ userName: user.userName }).then((res) => {
         setParchesU(res.parches);
       }, 1000)
     ),
